@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import "./App.css"
 
+
 const App = () => {
   const [article,setArticle] = useState([]);
 
@@ -12,14 +13,14 @@ const App = () => {
       method: 'GET',
       url: 'https://real-time-news-data.p.rapidapi.com/search',
       params: {
-        query: 'Football',
-        limit: '10',
+        query: ' technology OR coding OR programming OR software',
+        limit: '200',
         time_published: 'anytime',
         country: 'US',
         lang: 'en'
       },
       headers: {
-        'x-rapidapi-key': '4afbb366aemshd20f87ca222baa4p1969dbjsn89645635c2e9',
+        'x-rapidapi-key':'4afbb366aemshd20f87ca222baa4p1969dbjsn89645635c2e9' ,
         'x-rapidapi-host': 'real-time-news-data.p.rapidapi.com'
       }
     };
