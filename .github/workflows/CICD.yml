@@ -1,4 +1,3 @@
-
 name: CICD pipeline of article
 
 on:
@@ -44,12 +43,10 @@ steps:
          exit-code: 1
      
      
-  
-  
-  gitleaks_scans:
+ gitleaks_scans:
     
-  runs-on: ubuntu-latest
-  needs: trivy_scan
+ runs-on: ubuntu-latest
+ needs: trivy_scan
 
     steps:
       - name: checkout code
